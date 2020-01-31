@@ -6,10 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ChartComponent } from './chart/chart.component';
+import { ChartistModule } from 'ng-chartist';
 
 @NgModule({
   imports: [
     BrowserModule,
+    ChartistModule, // add ChartistModule to your imports
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
@@ -18,12 +21,13 @@ import { ProductListComponent } from './product-list/product-list.component';
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent
+    ProductListComponent,
+    ChartComponent
   ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
-
+ 
 
 /*
 Copyright Google LLC. All Rights Reserved.
